@@ -58,7 +58,7 @@ class CreateBoard :Baseactivity() {
         if (actionBar != null) {
             actionBar.setDisplayHomeAsUpEnabled(true)
             actionBar.setHomeAsUpIndicator(R.drawable.ic_baseline_arrow_back_24)
-            actionBar.title="Create Board"
+            actionBar.title="Create Project"
         }
 
         toolbar_create_board_activity.setNavigationOnClickListener { onBackPressed() }
