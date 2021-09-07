@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--TODO (Step 8: Design an item for selected members.)-->
+<!--START-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:padding="5dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_selected_member_image"
+        android:layout_width="@dimen/item_selected_member_image_size"
+        android:layout_height="@dimen/item_selected_member_image_size"
+        android:contentDescription="@string/image_contentDescription"
+        android:src="@drawable/ic_baseline_supervised_user_circle_24"
+        android:visibility="visible"
+        app:civ_border_color="@color/black"
+        app:civ_border_width="@dimen/item_member_image_circular_width_size"
+        tools:visibility="gone" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_add_member"
+        android:layout_width="@dimen/item_selected_member_image_size"
+        android:layout_height="@dimen/item_selected_member_image_size"
+        android:contentDescription="@string/image_contentDescription"
+        android:src="@drawable/ic_baseline_add_24"
+        android:visibility="visible"
+        app:civ_border_color="@color/mehroon"
+        app:civ_border_width="2dp"
+        tools:visibility="visible" />
+</LinearLayout>
+    <!--END-->

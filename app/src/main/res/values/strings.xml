@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">TrelloC</string>
+    <string name="image_contentDescription">image</string>
+
+    <string name="let_s_get_started_text">Let\'s Get started</string>
+
+    <string name="intro_text_description">Collaborate and Plan Together Across Multiple Devices on Projemanag’s Minimalist Interface.</string>
+
+    <string name="sign_in">SIGN IN</string>
+
+    <string name="sign_up">SIGN UP</string>
+    <string name="default_id">728732711084-ocfacnv4m2876t6f6iose7l7ni8d0gre.apps.googleusercontent.com</string>
+    <string name="please_click_back_again_to_exit">Please click back again to exit.</string>
+
+    <string name="please_wait">Please Wait…</string>
+    <string name="nav_profile">My Profile</string>
+    <string name="nav_signOut">Sign Out</string>
+    <string name="my_profile">My Profile</string>
+    <string name="task">Your Task</string>
+    <string name="action_add_list">Add List</string>
+    <string name="hint_list_name">List Name</string>
+    <string name="action_add_card">Add Card</string>
+    <string name="hint_card_name">Card Name</string>
+    <string name="add_list">Add List</string>
+    <string name="mem">Members</string>
+
+    <string name="label_color">Label Color</string>
+    <string name="select_color">Select Color</string>
+    <string name="select_members">Select Members</string>
+    <string name="due_date">Due Date</string>
+    <string name="select_due_date">Select Due Date</string>
+    <string name="confirmation_message_to_delete_card">Are you sure you want to delete card \'%1$s\'?</string>
+    <string name="str_select_label_color">Select Label Color</string>
+    <string name="str_select_member">Select Member</string>
+</resources>

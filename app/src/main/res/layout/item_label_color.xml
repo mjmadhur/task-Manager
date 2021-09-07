@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--TODO (Step 1: Design an item for label color.)-->
+<!--START-->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fl_main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:foreground="?attr/selectableItemBackground">
+
+    <View
+        android:id="@+id/view_main"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_label_color_height"
+        android:layout_margin="@dimen/item_label_color_margin"
+        android:background="@color/teal_700" />
+
+    <ImageView
+        android:id="@+id/iv_selected_color"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|end"
+        android:layout_marginEnd="@dimen/item_label_color_selected_image_marginEnd"
+        android:contentDescription="@string/image_contentDescription"
+        android:src="@drawable/ic_baseline_done_24"
+        android:visibility="gone"
+        tools:visibility="visible" />
+</FrameLayout><!--END-->

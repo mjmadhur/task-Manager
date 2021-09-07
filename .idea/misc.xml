@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/LENOVO/AndroidStudioProjects/TrelloC/app/src/main/res/drawable-v24/ic_baseline_delete_24.xml" value="0.1265765765765766" />
+        <entry key="..\:/Users/LENOVO/AndroidStudioProjects/TrelloC/app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.21574074074074073" />
+        <entry key="..\:/Users/LENOVO/AndroidStudioProjects/TrelloC/app/src/main/res/drawable/ic_baseline_done_24.xml" value="0.1712962962962963" />
+        <entry key="..\:/Users/LENOVO/AndroidStudioProjects/TrelloC/app/src/main/res/drawable/ic_black_color_back_24dp.xml" value="0.12747747747747748" />
+        <entry key="..\:/Users/LENOVO/AndroidStudioProjects/TrelloC/app/src/main/res/drawable/nav_header_main_background.xml" value="0.11036036036036036" />
+        <entry key="..\:/Users/LENOVO/AndroidStudioProjects/TrelloC/app/src/main/res/drawable/shape_button.xml" value="0.14270833333333333" />
+        <entry key="..\:/Users/LENOVO/AndroidStudioProjects/TrelloC/app/src/main/res/drawable/white_signup.xml" value="0.14270833333333333" />
+        <entry key="..\:/Users/LENOVO/AndroidStudioProjects/TrelloC/app/src/main/res/layout/activity_baseactivity.xml" value="0.1" />
+        <entry key="..\:/Users/LENOVO/AndroidStudioProjects/TrelloC/app/src/main/res/layout/activity_card_details.xml" value="0.21981981981981982" />
+        <entry key="..\:/Users/LENOVO/AndroidStudioProjects/TrelloC/app/src/main/res/layout/activity_create_board.xml" value="0.1" />
+        <entry key="..\:/Users/LENOVO/AndroidStudioProjects/TrelloC/app/src/main/res/layout/activity_intro.xml" value="0.152" />
+        <entry key="..\:/Users/LENOVO/AndroidStudioProjects/TrelloC/app/src/main/res/layout/activity_main.xml" value="0.13020833333333334" />
+        <entry key="..\:/Users/LENOVO/AndroidStudioProjects/TrelloC/app/src/main/res/layout/activity_members.xml" value="0.21981981981981982" />
+        <entry key="..\:/Users/LENOVO/AndroidStudioProjects/TrelloC/app/src/main/res/layout/activity_my_profile.xml" value="0.20652173913043478" />
+        <entry key="..\:/Users/LENOVO/AndroidStudioProjects/TrelloC/app/src/main/res/layout/activity_sign_in.xml" value="0.264" />
+        <entry key="..\:/Users/LENOVO/AndroidStudioProjects/TrelloC/app/src/main/res/layout/activity_sign_up.xml" value="0.176" />
+        <entry key="..\:/Users/LENOVO/AndroidStudioProjects/TrelloC/app/src/main/res/layout/activity_splashscreen.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/LENOVO/AndroidStudioProjects/TrelloC/app/src/main/res/layout/activity_tasklist.xml" value="0.11351351351351352" />
+        <entry key="..\:/Users/LENOVO/AndroidStudioProjects/TrelloC/app/src/main/res/layout/app_bar_main.xml" value="0.21981981981981982" />
+        <entry key="..\:/Users/LENOVO/AndroidStudioProjects/TrelloC/app/src/main/res/layout/content_main.xml" value="0.20270270270270271" />
+        <entry key="..\:/Users/LENOVO/AndroidStudioProjects/TrelloC/app/src/main/res/layout/dialog_list.xml" value="0.21981981981981982" />
+        <entry key="..\:/Users/LENOVO/AndroidStudioProjects/TrelloC/app/src/main/res/layout/dialog_progress.xml" value="0.21981981981981982" />
+        <entry key="..\:/Users/LENOVO/AndroidStudioProjects/TrelloC/app/src/main/res/layout/dialog_search_member.xml" value="0.264" />
+        <entry key="..\:/Users/LENOVO/AndroidStudioProjects/TrelloC/app/src/main/res/layout/item_board.xml" value="0.21981981981981982" />
+        <entry key="..\:/Users/LENOVO/AndroidStudioProjects/TrelloC/app/src/main/res/layout/item_card.xml" value="0.21981981981981982" />
+        <entry key="..\:/Users/LENOVO/AndroidStudioProjects/TrelloC/app/src/main/res/layout/item_card_selected_member.xml" value="0.16" />
+        <entry key="..\:/Users/LENOVO/AndroidStudioProjects/TrelloC/app/src/main/res/layout/item_label_color.xml" value="0.21981981981981982" />
+        <entry key="..\:/Users/LENOVO/AndroidStudioProjects/TrelloC/app/src/main/res/layout/item_member.xml" value="0.21981981981981982" />
+        <entry key="..\:/Users/LENOVO/AndroidStudioProjects/TrelloC/app/src/main/res/layout/item_task.xml" value="0.16799999999999998" />
+        <entry key="..\:/Users/LENOVO/AndroidStudioProjects/TrelloC/app/src/main/res/layout/nav_header_main.xml" value="0.21981981981981982" />
+        <entry key="..\:/Users/LENOVO/AndroidStudioProjects/TrelloC/app/src/main/res/layout/nav_header_main_background.xml" value="0.1" />
+        <entry key="..\:/Users/LENOVO/AndroidStudioProjects/TrelloC/app/src/main/res/menu/activity_main_drawer.xml" value="0.21981981981981982" />
+        <entry key="..\:/Users/LENOVO/AndroidStudioProjects/TrelloC/app/src/main/res/menu/menu_add_members.xml" value="0.21981981981981982" />
+        <entry key="..\:/Users/LENOVO/AndroidStudioProjects/TrelloC/app/src/main/res/menu/menu_delete_card.xml" value="0.21981981981981982" />
+        <entry key="..\:/Users/LENOVO/AndroidStudioProjects/TrelloC/app/src/main/res/menu/menu_members.xml" value="0.21981981981981982" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
