@@ -31,5 +31,5 @@
 
 
 # Some more feutures Such As broadcasting Notification on the User phone
-# if he is added to project will be added soon.
+# if he is added to project will be notified soon.
 # Note:The User who has Signed Up can only sign in and can only be added
