@@ -77,8 +77,10 @@ class Firestore {
                 activity.hideProgressDialog()
             }
     }
-    fun deleteBoard(){
-        firestore.collection(Constants.BOARDS).document(Constants.DOCUMENTID).delete()
+    fun deleteBoard(activity: MainActivity,documentid:String){
+        firestore.collection(Constants.BOARDS).document(documentid).delete().addOnSuccessListener {
+activity.deleteboardsuccess()
+        }
     }
 
     fun getBoardsList(activity: MainActivity){ firestore

@@ -45,11 +45,6 @@ open class boarditemAdapter(private val context: Context,private var list:ArrayL
     fun setOnClickListener(onClickListener: OnClickListener) {
         this.onclickListener = onClickListener
     }
-    fun deleteAt(position: Int){
-        list.removeAt(position)
-Firestore().deleteBoard()
-        notifyDataSetChanged()
-    }
 
     private class MyviewHolder(view: View):RecyclerView.ViewHolder(view)
 

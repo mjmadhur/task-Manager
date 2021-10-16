@@ -141,28 +141,36 @@ else{
                 }
 
             })
+            val deleteSwipeHadler = object : SwipetoDelete(this) {
+                override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
+                   showProgressDialog("please Wait")
+
+Firestore().deleteBoard(this@MainActivity,boardslist[viewHolder.adapterPosition].documentId)
+
+
+                }
+
+            }
+            val deleteitemtouchHelper = ItemTouchHelper(deleteSwipeHadler)
+            deleteitemtouchHelper.attachToRecyclerView(rv_boards_list)
             hideProgressDialog()
         }else{
             rv_boards_list.visibility=View.GONE
             tv_no_boards_available.visibility=View.VISIBLE
       }
-         val deleteSwipeHadler = object : SwipetoDelete(this) {
-             override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
-                 val adapter = rv_boards_list.adapter as boarditemAdapter
-                 adapter.deleteAt(
-                     viewHolder.adapterPosition
 
-
-                 )
-
-
-             }
-
-         }
-         val deleteitemtouchHelper = ItemTouchHelper(deleteSwipeHadler)
-         deleteitemtouchHelper.attachToRecyclerView(rv_boards_list)
        //  Firestore().getBoardsList(this@MainActivity)
      }
+    fun deleteboardsuccess(){
+        hideProgressDialog()
+        showErrorSnackBar("delete successfull")
+      getboards()
+
+    }
+    fun getboards(){
+        showProgressDialog("Wait")
+        Firestore().getBoardsList(this)
+    }
       }
 
 
