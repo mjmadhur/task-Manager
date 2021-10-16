@@ -2,9 +2,9 @@
 # Project-Manager
 # this is a project Manager app .you can say it As a basic level clone of trello
 
-# It uses most of fundamentals of android from front End to Firebase Database to store The data Which U can Access Anytime.Many of interesting features like Cards ,drag Drop 
+# It uses most of fundamentals of android from front End to Firebase Database to store The data Which U can Access Anytime.Many of interesting features like Cards ,drag Drop feature
 
- # feature ,Pick images From gallery and Camera is used in it
+ # Pick images From gallery and Camera is used in it
 
 # Here Are some of insights of App
 
@@ -31,5 +31,5 @@
 
 
 # Some more feutures Such As broadcasting Notification on the User phone
-# if he is added to project will be added soon.
-# Note:The User who has Signed Up can only sign and can only be added
+# if he is added to project will be notified soon.
+# Note:The User who has Signed Up can only sign in and can only be added
