@@ -1,9 +1,12 @@
 package com.example.trelloc
 
+import android.annotation.SuppressLint
 import android.app.Activity
 import android.app.Dialog
+import android.os.AsyncTask
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
@@ -17,6 +20,14 @@ import com.projemanag.adapters.MemberListItemsAdapter
 import kotlinx.android.synthetic.main.activity_members.*
 import kotlinx.android.synthetic.main.activity_my_profile.*
 import kotlinx.android.synthetic.main.dialog_search_member.*
+import org.json.JSONObject
+import java.io.BufferedReader
+import java.io.DataOutputStream
+import java.io.IOException
+import java.io.InputStreamReader
+import java.net.HttpURLConnection
+import java.net.SocketTimeoutException
+import java.net.URL
 
 class Members : Baseactivity() {
     private lateinit var mboarddetails:Board
@@ -113,6 +124,159 @@ mboarddetails.assignedTo.add(user.id)
         massignedmemblist.add(user)
         anyChangesmade=true
         settupmembers(massignedmemblist)
+        SendNotificationToUserAsyncTask(mboarddetails.name,user.fcmToken).execute()
+    }
+    @SuppressLint("StaticFieldLeak")
+    private inner class SendNotificationToUserAsyncTask(val boardName: String, val token: String) :
+        AsyncTask<Any, Void, String>() {
+
+
+        override fun onPreExecute() {
+            super.onPreExecute()
+
+            // Show the progress dialog.
+            showProgressDialog(resources.getString(R.string.please_wait))
+        }
+
+
+        override fun doInBackground(vararg params: Any): String {
+            var result: String
+
+
+            var connection: HttpURLConnection? = null
+            try {
+                val url = URL(Constants.FCM_BASE_URL) // Base Url
+                connection = url.openConnection() as HttpURLConnection
+
+                /**
+                 * A URL connection can be used for input and/or output.  Set the DoOutput
+                 * flag to true if you intend to use the URL connection for output,
+                 * false if not.  The default is false.
+                 */
+                connection.doOutput = true
+                connection.doInput = true
+
+                /**
+                 * Sets whether HTTP redirects should be automatically followed by this instance.
+                 * The default value comes from followRedirects, which defaults to true.
+                 */
+                connection.instanceFollowRedirects = false
+
+                /**
+                 * Set the method for the URL request, one of:
+                 *  POST
+                 */
+                connection.requestMethod = "POST"
+
+                /**
+                 * Sets the general request property. If a property with the key already
+                 * exists, overwrite its value with the new value.
+                 */
+                connection.setRequestProperty("Content-Type", "application/json")
+                connection.setRequestProperty("charset", "utf-8")
+                connection.setRequestProperty("Accept", "application/json")
+
+
+                connection.setRequestProperty(
+                    Constants.FCM_AUTHORIZATION, "${Constants.FCM_KEY}=${Constants.FCM_SERVER_KEY}"
+                )
+                // END
+
+
+                connection.useCaches = false
+
+                /**
+                 * Creates a new data output stream to write data to the specified
+                 * underlying output stream. The counter written is set to zero.
+                 */
+                val wr = DataOutputStream(connection.outputStream)
+
+                // TODO (Step 4: Create a notification data payload.)
+                // START
+                // Create JSONObject Request
+                val jsonRequest = JSONObject()
+val name:String=massignedmemblist[0].name.toString()
+                // Create a data object
+                val dataObject = JSONObject()
+                // Here you can pass the title as per requirement as here we have added some text and board name.
+                dataObject.put(Constants.FCM_KEY_TITLE, "Assigned to the Board $boardName by $name" )
+                // Here you can pass the message as per requirement as here we have added some text and appended the name of the Board Admin.
+                dataObject.put(
+                    Constants.FCM_KEY_MESSAGE,
+                    "You have been assigned to the new board by $name"
+                )
+
+                // Here add the data object and the user's token in the jsonRequest object.
+                jsonRequest.put(Constants.FCM_KEY_DATA, dataObject)
+                jsonRequest.put(Constants.FCM_KEY_TO, token)
+                // END
+
+
+                wr.writeBytes(jsonRequest.toString())
+                wr.flush() // Flushes this data output stream.
+                wr.close() // Closes this output stream and releases any system resources associated with the stream
+
+                val httpResult: Int =
+                    connection.responseCode // Gets the status code from an HTTP response message.
+
+                if (httpResult == HttpURLConnection.HTTP_OK) {
+
+
+                    val inputStream = connection.inputStream
+
+
+                    val reader = BufferedReader(InputStreamReader(inputStream))
+                    val sb = StringBuilder()
+                    var line: String?
+                    try {
+                        /**
+                         * Reads a line of text.  A line is considered to be terminated by any one
+                         * of a line feed ('\n'), a carriage return ('\r'), or a carriage return
+                         * followed immediately by a linefeed.
+                         */
+                        while (reader.readLine().also { line = it } != null) {
+                            sb.append(line + "\n")
+                        }
+                    } catch (e: IOException) {
+                        e.printStackTrace()
+                    } finally {
+                        try {
+                            /**
+                             * Closes this input stream and releases any system resources associated
+                             * with the stream.
+                             */
+                            inputStream.close()
+                        } catch (e: IOException) {
+                            e.printStackTrace()
+                        }
+                    }
+                    result = sb.toString()
+                } else {
+
+                    result = connection.responseMessage
+                }
+
+            } catch (e: SocketTimeoutException) {
+                result = "Connection Timeout"
+            } catch (e: Exception) {
+                result = "Error : " + e.message
+            } finally {
+                connection?.disconnect()
+            }
+
+            // You can notify with your result to onPostExecute.
+            return result
+        }
+        override fun onPostExecute(result: String) {
+            super.onPostExecute(result)
+
+            hideProgressDialog()
+
+            // JSON result is printed in the log.
+            Log.e("JSON Response Result", result)
+        }
+
     }
 
-}
+
+    }

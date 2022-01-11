@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.microsoft.azure:notification-hubs-android-sdk:0.6@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/7955ca2067a82fa7de802f7b0b6a93c3/transformed/jetified-notification-hubs-android-sdk-0.6/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/7955ca2067a82fa7de802f7b0b6a93c3/transformed/jetified-notification-hubs-android-sdk-0.6/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/7955ca2067a82fa7de802f7b0b6a93c3/transformed/jetified-notification-hubs-android-sdk-0.6/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

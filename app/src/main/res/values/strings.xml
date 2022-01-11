@@ -7,6 +7,7 @@
     <string name="intro_text_description">Collaborate and Plan Together Across Multiple Devices on Projemanag’s Minimalist Interface.</string>
 
     <string name="sign_in">SIGN IN</string>
+    <string name="default_notification_channel_id">projemanag_notification_channel_id</string>
 
     <string name="sign_up">SIGN UP</string>
     <string name="default_id">728732711084-ocfacnv4m2876t6f6iose7l7ni8d0gre.apps.googleusercontent.com</string>

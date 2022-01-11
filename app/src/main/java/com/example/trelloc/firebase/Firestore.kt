@@ -55,19 +55,31 @@ class Firestore {
         }
         return Currentuserid
     }
-   fun updateuserProfileData(activity: MyProfile,userhashmap:HashMap<String,Any>){
+   fun updateuserProfileData(activity:Activity,userhashmap:HashMap<String,Any>){
         firestore.collection(Constants.USERS).document(
             getcurrentuserid()).update(userhashmap).addOnSuccessListener {
-                Toast.makeText(activity,"Profile Updated Successfully",Toast.LENGTH_LONG).show()
-            activity.profileUpdatesuccess()
+
+            Toast.makeText(activity,"Profile Updated Successfully",Toast.LENGTH_LONG).show()
+            when(activity ){
+                is MyProfile-> {
+                    activity.profileUpdatesuccess()
+                }
+                is MainActivity->{
+                    activity.tokenUpdatesucess()
+                }
+            }
         }.addOnFailureListener {
-            activity.hideProgressDialog()
+            when(activity) {
+is MyProfile->
+                activity.hideProgressDialog()
+            }
         }
     }
     fun createBoard(activity:CreateBoard,board:Board){
 
         firestore.collection(Constants.BOARDS).document()
             .set(board, SetOptions.merge()).addOnSuccessListener {
+
                 Toast.makeText(activity,"Board Created Success",Toast.LENGTH_LONG).show()
                 activity.boardcreatedSuccess()
 

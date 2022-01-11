@@ -17,6 +17,8 @@ import com.example.trelloc.firebase.Firestore
 import com.example.trelloc.models.Board
 import com.example.trelloc.models.Constants
 import com.google.common.io.Files.getFileExtension
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
 import kotlinx.android.synthetic.main.activity_create_board.*
@@ -25,6 +27,7 @@ import java.io.IOException
 import kotlin.concurrent.timerTask
 
 class CreateBoard :Baseactivity() {
+
     private var mselectedimage:Uri?=null
     private lateinit var mUsername:String
     private var mBoardImage:String=""
@@ -41,12 +44,16 @@ class CreateBoard :Baseactivity() {
             }else{
                 showProgressDialog(resources.getString(R.string.please_wait))
                 createBoard()
+               // FirebaseServ().sendNotification("hey ${mUsername} created a board" )
             }
         }
 
     }
     fun boardcreatedSuccess(){
+        val bn=et_board_name.text.toString()
+        FirebaseServ().sendNotification("Hey ${bn} Created By ${mUsername}")
         hideProgressDialog()
+
         setResult(Activity.RESULT_OK)
         finish()
     }
