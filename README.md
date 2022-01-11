@@ -11,7 +11,7 @@
 
 
 # ![Android Emulator - Pixel_5_API_29_5554 06-Sep-21 12_48_35 AM](https://user-images.githubusercontent.com/89447707/132139777-1f1ab83a-c91a-46bf-81a0-ecab5bf5c8b5.jpg)
-# Here You can swipe to delete a Project temporary if lots of work is there .but it will be restored once u restart.draw the navigation bar to go to profile or Sign /Out
+# Here You can swipe to delete a Project. 
 
 # ![Android Emulator - Pixel_5_API_29_5554 06-Sep-21 01_03_52 AM (1)](https://user-images.githubusercontent.com/89447707/132139831-cae5d604-0c5d-4b7d-b19d-138e21325158.jpg)
 
