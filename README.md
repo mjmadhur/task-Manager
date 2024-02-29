@@ -1,6 +1,6 @@
 # Task -Manager
 # Project-Manager
-# this is a project Manager app .you can say it As a basic level clone of trello
+# This is a project Manager app .you can say it As a basic level clone of trello
 
 # It uses most of fundamentals of android from front End to Firebase Database to store The data Which U can Access Anytime.Many of interesting features like Cards ,drag Drop feature
 
